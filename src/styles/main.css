@@ -12,6 +12,7 @@
 
 .col {
     display: flex;
+    /* Test */
     flex-direction:column
 }
 
