@@ -12,7 +12,6 @@
 
 .col {
     display: flex;
-    /* Test 2 */
     flex-direction:column
 }
 
@@ -26,4 +25,25 @@
 
 .header-content {
     color: white;
+}
+
+.excel {
+    border: 2px solid green;
+    display:flex;
+    flex-direction: column;
+    padding: 4px;
+}
+
+.excel .formula-bar {
+     display : flex;
+     border: 1px solid black;
+    
+     padding: 4px;
+     align-items : center;
+     margin-bottom: 8px;
+}
+
+.excel .excel-table {
+    padding: 4px;
+    border : 1px solid green;
 }

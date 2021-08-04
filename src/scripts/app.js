@@ -73,3 +73,8 @@ function createRow(cols) {
 
     }
 }
+
+// window.addEventListener("DOMContentLoaded", function () {
+    document.getElementsByTagName('button')[0].click();
+// })
+

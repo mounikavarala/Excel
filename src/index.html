@@ -1,40 +1,49 @@
 <html>
-    <head>
-        <link href="styles/main.css" rel="stylesheet"/>
-    </head>
-    <body>
-        <main class="excel-body">
-            <section class="header">
-                    <h1>Excel POC</h1>
 
-                    <form class="dimensions" name="dimensions" onSubmit="renderExcel(event)"> 
-                        <div class="align-bottom">Enter your dimensions</div>
-                        <div class="col">
-                            <span>Rows</span>
-                            <span><input type="number" required="true" min="1" value="2" max="200" name="numOfRows"/></span>
-                        </div>
-                        <div class="col"> 
-                            <span>Columns</span>
-                            <span><input type="number" required="true" min="1" value="3" max="20" name="numOfCols"/></span>
-                        </div>
-                        <!-- <div class="col"> 
+<head>
+    <link href="styles/main.css" rel="stylesheet" />
+    <script src="scripts/app.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <main class="excel-body">
+        <section class="header">
+            <h1>Excel POC</h1>
+
+            <form class="dimensions" name="dimensions" onSubmit="renderExcel(event)">
+                <div class="align-bottom">Enter your dimensions</div>
+                <div class="col">
+                    <span>Rows</span>
+                    <span><input type="number" required="true" min="1" value="2" max="200" name="numOfRows" /></span>
+                </div>
+                <div class="col">
+                    <span>Columns</span>
+                    <span><input type="number" required="true" min="1" value="3" max="20" name="numOfCols" /></span>
+                </div>
+                <!-- <div class="col"> 
                             <span>Dummy Val</span>
                             <span><input type="text" required="true" value="Dummy value" name="dummyValue"/></span>
                         </div> -->
-                        <div class="align-bottom">
-                            <button type="submit" for="dimensions"> Render Excel </button>
-                        </div>
-                    </form>
-            </section>
+                <div class="align-bottom">
+                    <button type="submit" for="dimensions"> Render Excel </button>
+                </div>
+            </form>
+        </section>
 
-            <section class="excel"> 
-                <table id="book1">
+        <section class="excel">
+            <div class="formula-bar">
+                <span> Formula bar for </span> <span id="cell-in-focus"></span> = <span>
+                    <textarea id="formula-text-area"
+                        class="formula-text-area"></textarea></span>
+            </div>
+            <table class="excel-table" id="book1">
 
-                </table>
-            </section>
-        </main>
-    
-    </body>
-    <script src="scripts/app.js" type="text/javascript"></script>
+            </table>
+        </section>
+    </main>
+
+</body>
+
+
 </html>
-    
